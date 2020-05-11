@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+    <style>
+        #app{
+            padding: 0px 10px;
+            margin: 30px auto;
+            width: 600px;
+            border: 2px solid lightblue;
+        }
+        .top{
+            margin: 10px auto;
+        }
+        .tab{
+            width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .content{
+            text-align: center;
+        }
+        .txt{
+            color: rgb(255, 0, 34);
+        }
+        .btn{
+            border: none;
+            background-color:orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <span>商品名称：</span>
+            <input type="text" name="masg" v-model="masg" />
+            <span>商品价格：</span>
+            <input type="text" name="num" v-model="num" />
+            <button class="btn" v-on:click="add">增加商品</button>
+        </div>
+        <br />
+        <div >
+            <table class="tab"  cellspacing="0">
+                <template v-for="(item,index) in text">
+                    <tr style="background-color: #6AAFD8;">
+                        <td class="content">商品序号</td>
+                        <td class="content">商品名称</td>
+                        <td class="content">商品价格</td>
+                        <td class="content">删除商品</td>
+                    </tr>
+                    <tr>
+                        <td class="content">{{index+1}}</td>
+                        <td class="content">{{item.masg}}</td>
+                        <td class="content">￥{{item.num}}</td>
+                        <td class="content txt" v-on:click="cencle" style="cursor: pointer;">删除</td>
+                    </tr>
+                </template>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            text:[],
+            masg:"",
+            num:"",
+        },
+        methods:{
+            add:function(){
+                // 如果输入商品名称不为空的时候就
+                if(this.masg.trim() !==""){
+                    let srt={masg:this.masg,num:this.num};
+                    this.text.unshift(srt);
+                //当输入的商品名称为空的时候，弹窗警告 
+                }else{
+                    alert("请输入内容");
+                }
+            },
+            // 删除对应的商品
+            cencle:function(){
+                this.text.shift(this.masg,this.num);
+            }
+        }
+    })
+</script>
+</html>

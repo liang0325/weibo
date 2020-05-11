@@ -1,0 +1,44 @@
+{
+  "id": "1811780",
+  "name": "微博",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "551914",
+      "name": "笑脸",
+      "font_class": "smiling",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "2155593",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "3359006",
+      "name": "闪电",
+      "font_class": "shandian",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "3895529",
+      "name": "图片",
+      "font_class": "techreport-",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "11372667",
+      "name": "话题符号",
+      "font_class": "huatifuhao",
+      "unicode": "e8b0",
+      "unicode_decimal": 59568
+    }
+  ]
+}
