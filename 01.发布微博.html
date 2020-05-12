@@ -30,10 +30,18 @@
         }
         .top{
             margin-top: 5px;
-            margin-left: 8px;
+            margin-left: 10px;
             color: #1b7fb6;
         }
+        .hot{
+            margin-top: 5px;
+            margin-right: 10px;
+            color:gold;
+            float: right;
+            cursor: pointer;
+        }
         .text{
+            resize: none;
             margin-top: 10px;
             width:400px;
             height:100px;
@@ -46,7 +54,6 @@
             margin-left: auto;
             margin-right: auto;
             font-size: 13px;
-            /* 超出换行 */
             word-wrap:break-word;
             margin-top: 10px;
             width: 400px;
@@ -80,28 +87,33 @@
             display: block;
         }
         .icon-smiling{
-            font-size:20px;color: orange;font-weight: bold;margin-left: 8px;
+            font-size:13px;color: orange;font-weight: bold;
         }
         .icon-techreport-{
-            font-size: 20px; color: greenyellow;font-weight: bold;
+            font-size: 13px; color: greenyellow;font-weight: bold;
         }
         .icon-shipin{
-            font-size: 20px;color: skyblue;font-weight: bold;
+            font-size: 13px;color: skyblue;font-weight: bold;
         }
         .icon-huatifuhao{
-            font-size: 20px;color: blue;font-weight: bold;
+            font-size: 13px;color: blue;font-weight: bold;
         }
         .icon-shandian{
-            font-size: 20px;color: yellow;font-weight: bold;
+            font-size: 13px;color: yellow;font-weight: bold;
         }
         .line{
-            font-size: 14px;
+            font-size: 12px;
+        }
+        .iconfont{
+            margin-left: 10px;
         }
     </style>    
 </head>
 <body>
     <div class="mag app">
+        <p class="hot">热门微博</p>
         <p class="top">有什么新鲜事想告诉大家?</p>
+        <p class="qc"></p>
         <!-- 建立一个多行文本框 -->
         <textarea class="mag text" v-model="masg"></textarea>
         <br />
@@ -109,7 +121,7 @@
             <a href="#">
                 <span class="iconfont icon-smiling"></span>
                 <span class="line">表情</span>
-            </a>
+            </a>  
             <a href="#">
                 <span class="iconfont icon-techreport-"></span>
                 <span class="line">图片</span>

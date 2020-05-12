@@ -35,12 +35,13 @@
 </head>
 <body>
     <div id="app">
+        <p style="text-align: center;color: gold;font-weight: bold;font-size:20px ;">商品</p>
         <div class="top">
             <span>商品名称：</span>
             <!-- 建立一个文本框 -->
             <input type="text" name="masg" v-model="masg" />
             <span>商品价格：</span>
-            <input type="text" name="num" v-model="num" />
+            <input type="number" name="num" v-model="num" />
             <!-- 当点击v-on时，可以增加商品 -->
             <button class="btn" v-on:click="add">增加商品</button>
         </div>
