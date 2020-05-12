@@ -37,14 +37,18 @@
     <div id="app">
         <div class="top">
             <span>商品名称：</span>
+            <!-- 建立一个文本框 -->
             <input type="text" name="masg" v-model="masg" />
             <span>商品价格：</span>
             <input type="text" name="num" v-model="num" />
+            <!-- 当点击v-on时，可以增加商品 -->
             <button class="btn" v-on:click="add">增加商品</button>
         </div>
         <br />
         <div >
+            <!-- 建立一个列表 -->
             <table class="tab"  cellspacing="0">
+                <!-- v-for循环-->
                 <template v-for="(item,index) in text">
                     <tr style="background-color: #6AAFD8;">
                         <td class="content">商品序号</td>
@@ -56,7 +60,8 @@
                         <td class="content">{{index+1}}</td>
                         <td class="content">{{item.masg}}</td>
                         <td class="content">￥{{item.num}}</td>
-                        <td class="content txt" v-on:click="cencle" style="cursor: pointer;">删除</td>
+                        <!-- 建立一个v-on的点击事件，但点击是作删除事件 -->
+                        <td class="content txt" v-on:click="cencle(index)" style="cursor: pointer;">删除</td>
                     </tr>
                 </template>
             </table>
@@ -83,8 +88,8 @@
                 }
             },
             // 删除对应的商品
-            cencle:function(){
-                this.text.shift(this.masg,this.num);
+            cencle:function(index){
+                this.text.splice(index,1);
             }
         }
     })
