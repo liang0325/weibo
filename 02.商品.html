@@ -50,13 +50,13 @@
             <!-- 建立一个列表 -->
             <table class="tab"  cellspacing="0">
                 <!-- v-for循环-->
-                <template v-for="(item,index) in text">
-                    <tr style="background-color: #6AAFD8;">
+                <tr style="background-color: #6AAFD8;">
                         <td class="content">商品序号</td>
                         <td class="content">商品名称</td>
                         <td class="content">商品价格</td>
                         <td class="content">删除商品</td>
                     </tr>
+                <template v-for="(item,index) in text">
                     <tr>
                         <td class="content">{{index+1}}</td>
                         <td class="content">{{item.masg}}</td>
